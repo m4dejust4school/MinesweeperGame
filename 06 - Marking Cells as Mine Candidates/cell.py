@@ -4,10 +4,12 @@ import settings
 import ctypes
 import sys
 
+
 class Cell:
     all = []
     cell_count = settings.CELL_COUNT
     cell_count_label_object = None
+
     def __init__(self,x, y, is_mine=False):
         self.is_mine = is_mine
         self.is_opened = False
@@ -109,7 +111,6 @@ class Cell:
         self.cell_btn_object.configure(bg='red')
         ctypes.windll.user32.MessageBoxW(0, 'You clicked on a mine', 'Game Over', 0)
         sys.exit()
-
 
     def right_click_actions(self, event):
         if not self.is_mine_candidate:
