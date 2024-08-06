@@ -28,12 +28,7 @@ class CellPydantic(BaseModel):
     def get_all_instances(cls) -> List['CellPydantic']:
         return cls._objects
 
-    def create_btn_object(self, location):
-        btn = Button(
-            location,
-            width=12,
-            height=4,
-        )
+    def assign_button_and_button_events(self, btn: Button):
         btn.bind(constants.LEFT_CLICK_STR, self.left_click_actions ) # Left Click
         btn.bind(constants.RIGHT_CLICK_STR, self.right_click_actions ) # Right Click
         self.cell_btn_object = btn
@@ -98,7 +93,7 @@ class CellPydantic(BaseModel):
             # Replace the text of cell count label with the newer count
             if CellPydantic.cell_count_label_object:
                 CellPydantic.cell_count_label_object.configure(
-                    text=f"Cells Left:{CellPydantic.cell_count}"
+                    text=f"Cells Left: {CellPydantic.cell_count}"
                 )
             # If this was a mine candidate, then for safety, we should
             # configure the background color to SystemButtonFace
@@ -136,17 +131,7 @@ class CellPydantic(BaseModel):
             picked_cell.is_mine = True
             print(picked_cell)
 
-    def __repr__(self):
-        return f"Cell({self.x}, {self.y})"
-
 
     @staticmethod
-    def create_cell_count_label(location):
-        lbl = Label(
-            location,
-            bg='black',
-            fg='white',
-            text=f"Cells Left:{CellPydantic.cell_count}",
-            font=("", 30)
-        )
+    def assign_cell_count_label(lbl: Label):
         CellPydantic.cell_count_label_object = lbl
