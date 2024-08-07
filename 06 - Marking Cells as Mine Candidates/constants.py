@@ -1,7 +1,7 @@
 GRID_SIZE = 6
 WIDTH = GRID_SIZE * 200
 HEIGHT = GRID_SIZE * 120
-CELL_COUNT = GRID_SIZE ** 2
+CELL_COUNT = GRID_SIZE**2
 MINES_COUNT = (CELL_COUNT) // 4
 LEFT_CLICK_STR = "<Button-1>"
 RIGHT_CLICK_STR = "<Button-3>"
@@ -24,5 +24,5 @@ SURROUNDED_COLORS = {
     5: "#9B59B6",  # Soft Purple
     6: "#E67E22",  # Warm Orange
     7: "#1ABC9C",  # Teal
-    8: "#E91E63"   # Vibrant Pink
+    8: "#E91E63",  # Vibrant Pink
 }

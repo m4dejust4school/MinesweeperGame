@@ -3,26 +3,39 @@ import constants
 from cell import CellPydantic
 from tkinter import font as tkfont
 
+
 class MineSweeperUI(tk.Tk):
     def __init__(self):
         super().__init__()
 
-
-        self.geometry(f'{constants.WIDTH}x{constants.HEIGHT}')
+        self.geometry(f"{constants.WIDTH}x{constants.HEIGHT}")
         self.title("Minesweeper Game")
         self.resizable(False, False)
         self.configure(bg=constants.WINDOW_BG_COLOR)
 
-
-        self.title_font = tkfont.Font(family=constants.FONT_FAMILY, size=24, weight="bold")
+        self.title_font = tkfont.Font(
+            family=constants.FONT_FAMILY, size=24, weight="bold"
+        )
         self.label_font = tkfont.Font(family=constants.FONT_FAMILY, size=14)
 
         # Create title label
-        title_label = tk.Label(self, text="MineSweeper Game", font=self.title_font, fg="#FFFFFF", bg="#2E2E2E")
+        title_label = tk.Label(
+            self,
+            text="MineSweeper Game",
+            font=self.title_font,
+            fg="#FFFFFF",
+            bg="#2E2E2E",
+        )
         title_label.pack(pady=20)
 
         # Create Cells left label
-        self.cells_left_label = tk.Label(self, text="Select a button to start!", font=self.label_font, fg="#FFFFFF", bg="#2E2E2E")
+        self.cells_left_label = tk.Label(
+            self,
+            text="Select a button to start!",
+            font=self.label_font,
+            fg="#FFFFFF",
+            bg="#2E2E2E",
+        )
         self.cells_left_label.pack(side="right", anchor="w")
 
         # Placeholder for game grid or other widgets
