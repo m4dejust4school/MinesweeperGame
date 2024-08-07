@@ -14,3 +14,15 @@ HIGHLIGHT_COLOR = "#FF6347"
 FLAG_COLOR = "#FFD700"
 FONT_FAMILY = "Helvetica"
 WINDOW_BG_COLOR = "#2C2C2C"
+
+SURROUNDED_COLORS = {
+    0: "#2C2C2C",  # Dark Gray
+    1: "#3498DB",  # Bright Blue
+    2: "#E74C3C",  # Vibrant Red
+    3: "#2ECC71",  # Fresh Green
+    4: "#F1C40F",  # Warm Yellow
+    5: "#9B59B6",  # Soft Purple
+    6: "#E67E22",  # Warm Orange
+    7: "#1ABC9C",  # Teal
+    8: "#E91E63"   # Vibrant Pink
+}
