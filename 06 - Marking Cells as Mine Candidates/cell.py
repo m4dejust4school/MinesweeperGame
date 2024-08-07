@@ -1,4 +1,4 @@
-from tkinter import Button, Label
+from tkinter import Button, Label, font
 import random
 import constants
 import ctypes
@@ -92,7 +92,7 @@ class CellPydantic(BaseModel):
             CellPydantic.cell_count -= 1
             self.cell_btn_object.configure(
                 text=self.surrounded_cells_mines_length,
-                fg=constants.SURROUNDED_COLORS[self.surrounded_cells_mines_length],
+                fg=constants.SURROUNDED_COLORS[self.surrounded_cells_mines_length]
             )
             # Replace the text of cell count label with the newer count
             if CellPydantic.cell_count_label_object:

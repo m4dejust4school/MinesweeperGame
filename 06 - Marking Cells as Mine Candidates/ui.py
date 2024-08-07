@@ -45,7 +45,11 @@ class MineSweeperUI(tk.Tk):
         for x in range(constants.GRID_SIZE):
             for y in range(constants.GRID_SIZE):
                 c = CellPydantic(x=x, y=y)
-                btn = tk.Button(game_frame, text="", width=12, height=4)
-
+                btn = tk.Button(
+                    game_frame,
+                    text="",
+                    width=12,
+                    height=4
+                )
                 c.assign_button_and_button_events(btn)
                 btn.grid(row=x, column=y, padx=5, pady=5)

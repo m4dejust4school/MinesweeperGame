@@ -5,6 +5,7 @@ CELL_COUNT = GRID_SIZE**2
 MINES_COUNT = (CELL_COUNT) // 4
 LEFT_CLICK_STR = "<Button-1>"
 RIGHT_CLICK_STR = "<Button-3>"
+
 # Constants for the UI design
 BUTTON_BG_COLOR = "#3C3C3C"
 BUTTON_ACTIVE_BG_COLOR = "#474747"
