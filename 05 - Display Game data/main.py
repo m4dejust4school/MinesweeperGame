@@ -53,6 +53,5 @@ Cell.cell_count_label_object.place(
 
 Cell.randomize_mines()
 
-
 # Run the window
 root.mainloop()
